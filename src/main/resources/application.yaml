@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@cluster0.zrpyu.gcp.mongodb.net/?retryWrites=true&w=majority
+      database: nexus
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.Oracle10gDialect
+#  datasource:
+#    url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    username: rm87056
+#    password: 220303
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    use-root-path: true
+
