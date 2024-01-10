@@ -32,6 +32,6 @@ jobs:
       - name: Pull image from docker hub
         run: docker pull dijounas/report-gen-api:latest
       - name: Remove docker container
-        run: docker rm -f deploy_report_gen_api
+        run: docker rm -f report-gen-api
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name deploy_report_gen_api dijounas/report-gen-api
+        run: docker run -d -p 8080:8080 --name report-gen-api dijounas/report-gen-api
