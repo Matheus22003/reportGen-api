@@ -30,8 +30,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull dijounas/report-gen-api:latest
+        run: sudo docker pull dijounas/report-gen-api:latest
       - name: Remove docker container
-        run: docker rm -f report-gen-api
+        run: sudo docker rm -f report-gen-api
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name report-gen-api dijounas/report-gen-api
+        run: sudo docker run -d -p 8080:8080 --name report-gen-api dijounas/report-gen-api
