@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 public class ComponentFront extends Identifiable<String> {
 
-    private String name;
+    private String nome;
     private String tipoComponente;
     private List<OptionFront> options;
     private String descricao;
