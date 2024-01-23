@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OptionFront {
+    private String placeholder;
     private String label;
     private String value;
+    private String title;
 }
