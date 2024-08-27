@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OptionFront {
-    private String placeholder;
-    private String label;
+public class ElementRefData {
+    private String name;
     private String value;
-    private String title;
 }
