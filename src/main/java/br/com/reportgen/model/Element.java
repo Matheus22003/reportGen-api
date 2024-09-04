@@ -14,5 +14,5 @@ import java.util.List;
 public class Element extends Identifiable<String> {
     private String elementRefStyle;
     private List<ElementRefData> elementRefData;
-    private String elementRefNativeData;
+    private ElementRefNativeData elementRefNativeData;
 }

@@ -2,19 +2,28 @@ package br.com.reportgen.generics;
 
 import br.com.reportgen.model.Identifiable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 @Service
-public class GenericService<T extends Identifiable<ID>, ID, R extends MongoRepository<T, ID>> {
+public class GenericService<T extends Identifiable<ID>, ID, R extends PagingAndSortingRepository<T, ID>> {
 
     @Autowired
     private R repository;
 
-    public void insert(T t) {
-        repository.save(t);
+    public void preSave(T t) {
+    }
+
+    public T save(T t) {
+        this.preSave(t);
+        return repository.save(t);
     }
 
     public T findById(ID id) {
@@ -26,6 +35,11 @@ public class GenericService<T extends Identifiable<ID>, ID, R extends MongoRepos
     }
 
     public List<T> findAll() {
-        return repository.findAll();
+        return (List<T>) repository.findAll();
     }
+
+    public Page<T> findAll(PageRequest pageRequest) {
+        return repository.findAll(pageRequest);
+    }
+
 }
