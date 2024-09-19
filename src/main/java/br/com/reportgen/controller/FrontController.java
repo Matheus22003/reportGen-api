@@ -45,5 +45,11 @@ public class FrontController {
         return ok(frontService.findById(id));
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
+        frontService.deleteById(id);
+        return ok().build();
+    }
+
 
 }
