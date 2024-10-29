@@ -16,7 +16,7 @@ import java.util.List;
 public class GenericService<T extends Identifiable<ID>, ID, R extends PagingAndSortingRepository<T, ID>> {
 
     @Autowired
-    private R repository;
+    public R repository;
 
     public void preSave(T t) {
     }

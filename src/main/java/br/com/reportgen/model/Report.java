@@ -17,6 +17,8 @@ public class Report extends Identifiable<String> {
 
     private String name;
 
+    private List<List<Element>> pages;
+
     private List<Element> elements;
 
     private String createdBy;
