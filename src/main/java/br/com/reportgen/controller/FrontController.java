@@ -38,6 +38,7 @@ public class FrontController {
             @RequestParam(defaultValue = "created,desc") String sort) {
         PageRequest pageRequest = PageRequest.of(page, size, Sort.by(sort));
         return ok(frontService.findAll(pageRequest).getContent());
+
     }
 
     @GetMapping("/{id}")
