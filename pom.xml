@@ -11,7 +11,7 @@
     <groupId>br.com.fiap.ford</groupId>
     <artifactId>reportGen-api</artifactId>
     <version>0.0.2</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>nexus-api</name>
     <description>API for Nexus Application</description>
     <properties>
