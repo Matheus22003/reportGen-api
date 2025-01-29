@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Map;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -15,4 +16,5 @@ public class Element extends Identifiable<String> {
     private String elementRefStyle;
     private List<ElementRefData> elementRefData;
     private ElementRefNativeData elementRefNativeData;
+    private Map<String, ?> instanceData;
 }
